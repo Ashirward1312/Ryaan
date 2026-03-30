@@ -6,9 +6,8 @@ const THEME_RED = "#c0392b";
 
 const BaseStyles = () => (
   <style>{`
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap');
 
-    :root{
+    .vd-page{
       --red: ${THEME_RED};
       --bg: #09090b;
       --panel: rgba(255,255,255,0.04);

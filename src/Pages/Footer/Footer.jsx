@@ -12,7 +12,6 @@ const Footer = () => {
     return (
         <>
             <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap');
 
         .ft-root {
           background: #09090b;
@@ -241,8 +240,7 @@ const Footer = () => {
                                 <div className="ft-icon-box"><FiMapPin /></div>
                                 <div className="ft-contact-text">
                                     <span>Address</span>
-                                    B-24, Industrial Area, Phase II,<br />
-                                    Ahmedabad, Gujarat - 380022
+                                    Shankar Nagar, Raipur, Chhattisgarh
                                 </div>
                             </div>
 
@@ -250,7 +248,7 @@ const Footer = () => {
                                 <div className="ft-icon-box"><FiPhone /></div>
                                 <div className="ft-contact-text">
                                     <span>Phone</span>
-                                    +91 70003 15002
+                                    +91 9876543210
                                 </div>
                             </div>
 

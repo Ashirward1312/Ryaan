@@ -10,7 +10,7 @@ const BaseStyles = () => (
   <style>{`
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap');
 
-    :root{
+    .rw-page{
       --red: ${THEME_RED};
       --ink: #111114;
       --muted: rgba(17,17,20,0.62);

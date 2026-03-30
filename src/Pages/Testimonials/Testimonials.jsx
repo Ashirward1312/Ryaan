@@ -13,7 +13,7 @@ const BaseStyles = () => (
   <style>{`
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap');
 
-    :root{
+    .tm-page{
       --red: ${THEME_RED};
       --bg: #09090b;
       --line: rgba(255,255,255,0.10);
