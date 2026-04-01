@@ -6,6 +6,14 @@ import logo from "../img/2.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const handleScrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <style>{`
@@ -21,7 +29,6 @@ const Footer = () => {
           border-top: 2px solid #c0392b;
         }
 
-        /* Ambient Glow */
         .ft-root::after {
           content: '';
           position: absolute;
@@ -48,10 +55,18 @@ const Footer = () => {
           margin-bottom: 60px;
         }
 
-        @media (min-width: 640px) { .ft-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (min-width: 1024px) { .ft-grid { grid-template-columns: 2fr 1fr 1.2fr 1.5fr; } }
+        @media (min-width: 640px) {
+          .ft-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
 
-        /* Brand Column */
+        @media (min-width: 1024px) {
+          .ft-grid {
+            grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+          }
+        }
+
         .ft-brand-name {
           font-family: 'Bebas Neue', sans-serif;
           font-size: 32px;
@@ -59,6 +74,7 @@ const Footer = () => {
           margin-bottom: 12px;
           color: #fff;
         }
+
         .ft-desc {
           font-size: 14px;
           color: rgba(255, 255, 255, 0.6);
@@ -66,10 +82,12 @@ const Footer = () => {
           max-width: 320px;
           margin-bottom: 24px;
         }
+
         .ft-socials {
           display: flex;
           gap: 12px;
         }
+
         .ft-social-link {
           width: 38px;
           height: 38px;
@@ -83,6 +101,7 @@ const Footer = () => {
           text-decoration: none;
           border: 1px solid rgba(255, 255, 255, 0.08);
         }
+
         .ft-social-link:hover {
           background: #c0392b;
           color: #fff;
@@ -90,7 +109,6 @@ const Footer = () => {
           box-shadow: 0 10px 20px -5px rgba(192, 57, 43, 0.4);
         }
 
-        /* Column Headers */
         .ft-h3 {
           font-family: 'Bebas Neue', sans-serif;
           font-size: 20px;
@@ -100,7 +118,6 @@ const Footer = () => {
           text-transform: uppercase;
         }
 
-        /* Link Lists */
         .ft-list {
           list-style: none;
           padding: 0;
@@ -109,6 +126,7 @@ const Footer = () => {
           flex-direction: column;
           gap: 12px;
         }
+
         .ft-link {
           text-decoration: none;
           color: rgba(255, 255, 255, 0.6);
@@ -118,17 +136,18 @@ const Footer = () => {
           align-items: center;
           gap: 8px;
         }
+
         .ft-link:hover {
           color: #c0392b;
           padding-left: 4px;
         }
 
-        /* Contact Items */
         .ft-contact-item {
           display: flex;
           gap: 14px;
           margin-bottom: 20px;
         }
+
         .ft-icon-box {
           width: 32px;
           height: 32px;
@@ -141,11 +160,13 @@ const Footer = () => {
           flex-shrink: 0;
           margin-top: 2px;
         }
+
         .ft-contact-text {
           font-size: 14px;
           color: rgba(255, 255, 255, 0.72);
           line-height: 1.6;
         }
+
         .ft-contact-text span {
           display: block;
           font-size: 12px;
@@ -155,22 +176,24 @@ const Footer = () => {
           margin-bottom: 4px;
         }
 
-        .ft-contact-link{
+        .ft-contact-link {
           color: rgba(255, 255, 255, 0.72);
           text-decoration: none;
           display: inline-block;
           font-variant-numeric: tabular-nums;
+          font-weight: 400;
         }
-        .ft-contact-link:hover{
+
+        .ft-contact-link:hover {
           color: #c0392b;
         }
-        .ft-contact-lines{
-          display:flex;
-          flex-direction:column;
+
+        .ft-contact-lines {
+          display: flex;
+          flex-direction: column;
           gap: 6px;
         }
 
-        /* Bottom Bar */
         .ft-bottom {
           padding: 30px 0;
           border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -181,7 +204,12 @@ const Footer = () => {
           justify-content: space-between;
           gap: 20px;
         }
-        @media (min-width: 768px) { .ft-bottom { flex-direction: row; } }
+
+        @media (min-width: 768px) {
+          .ft-bottom {
+            flex-direction: row;
+          }
+        }
 
         .ft-copy,
         .ft-made {
@@ -210,7 +238,6 @@ const Footer = () => {
                 and high-impact event solutions. Precision in every print, excellence in every sign.
               </p>
 
-              {/* ✅ Only Instagram */}
               <div className="ft-socials">
                 <a
                   href="https://www.instagram.com/ryaansignage?igsh=dTZjcHl2bnltbjY0"
@@ -229,11 +256,11 @@ const Footer = () => {
             <div className="ft-col">
               <h3 className="ft-h3">Quick Links</h3>
               <ul className="ft-list">
-                <li><Link to="/" className="ft-link">Home</Link></li>
-                <li><Link to="/about" className="ft-link">About Company</Link></li>
-                <li><Link to="/gallery" className="ft-link">View Projects</Link></li>
-                <li><Link to="/services" className="ft-link">Our Services</Link></li>
-                <li><Link to="/contact" className="ft-link">Get A Quote</Link></li>
+                <li><Link to="/" className="ft-link" onClick={handleScrollTop}>Home</Link></li>
+                <li><Link to="/about" className="ft-link" onClick={handleScrollTop}>About Company</Link></li>
+                <li><Link to="/gallery" className="ft-link" onClick={handleScrollTop}>View Projects</Link></li>
+                <li><Link to="/services" className="ft-link" onClick={handleScrollTop}>Our Services</Link></li>
+                <li><Link to="/contact" className="ft-link" onClick={handleScrollTop}>Get A Quote</Link></li>
               </ul>
             </div>
 
@@ -241,11 +268,11 @@ const Footer = () => {
             <div className="ft-col">
               <h3 className="ft-h3">Our Expertise</h3>
               <ul className="ft-list">
-                <li><Link to="/services" className="ft-link">Octonorm Stall</Link></li>
-                <li><Link to="/services" className="ft-link">Designer Stall</Link></li>
-                <li><Link to="/services" className="ft-link">Fabrication</Link></li>
-                <li><Link to="/services" className="ft-link">Outdoor Branding</Link></li>
-                <li><Link to="/services" className="ft-link">Event Planning</Link></li>
+                <li><Link to="/services" className="ft-link" onClick={handleScrollTop}>Octonorm Stall</Link></li>
+                <li><Link to="/services" className="ft-link" onClick={handleScrollTop}>Designer Stall</Link></li>
+                <li><Link to="/services" className="ft-link" onClick={handleScrollTop}>Fabrication</Link></li>
+                <li><Link to="/services" className="ft-link" onClick={handleScrollTop}>Outdoor Branding</Link></li>
+                <li><Link to="/services" className="ft-link" onClick={handleScrollTop}>Event Planning</Link></li>
               </ul>
             </div>
 
@@ -281,7 +308,7 @@ const Footer = () => {
                 <div className="ft-contact-text">
                   <span>Email</span>
                   <a className="ft-contact-link" href="mailto:ryaangroup1@gmail.com">
-                   Ryaansignage@gmail.com
+                    Ryaansignage@gmail.com
                   </a>
                 </div>
               </div>
