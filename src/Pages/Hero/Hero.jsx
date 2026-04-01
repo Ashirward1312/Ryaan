@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const typingLines = [
   "Outdoor advertising helps your business get noticed by more people every day.",
@@ -425,8 +426,8 @@ const HeroSection = () => {
 
           {/* Buttons */}
           <div className={`btn-row ${mounted ? "visible" : ""}`}>
-            <a href="#contact" className="btn-primary">Get Free Quote</a>
-            <a href="#services" className="btn-secondary">View Services</a>
+            <Link to="/contact" className="btn-primary">Get Free Quote</Link>
+            <Link to="/services" className="btn-secondary">View Services</Link>
           </div>
 
           {/* Stats */}

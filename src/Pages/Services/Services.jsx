@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef } from "react";
+import { Link } from "react-router-dom";
 
 /* Services Page (Dark / Black Theme + Red Accent)
    ✅ Same poster content (no images)
@@ -495,6 +496,9 @@ const BaseStyles = () => (
       text-transform: uppercase;
       font-size: 11px;
       cursor:pointer;
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
       transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, border-color 160ms ease;
       white-space: nowrap;
     }
@@ -618,6 +622,22 @@ const ServiceCard = ({ s }) => (
           {t}
         </span>
       ))}
+      <Link
+        to="/contact"
+        style={{
+          marginLeft: "auto",
+          fontSize: "10px",
+          fontWeight: "800",
+          color: "var(--red)",
+          textTransform: "uppercase",
+          letterSpacing: "0.05em",
+          display: "flex",
+          alignItems: "center",
+          gap: "4px",
+        }}
+      >
+        Inquire →
+      </Link>
     </div>
   </article>
 );
@@ -671,6 +691,16 @@ const ServicesDarkPremium = ({
         tags: ["Glow Sign", "Storefront", "Visibility"],
         icon: <IconSign />,
       },
+
+      // ✅ New Professional Card
+      {
+        pill: "Hoarding",
+        title: "Hoarding Printing & Maintenance",
+        desc: "The hoarding structure is provided by a third party, while we manage end-to-end printing, installation, and ongoing maintenance to ensure consistent brand visibility.",
+        tags: ["Third-Party Hoarding", "Printing", "Installation", "Maintenance"],
+        icon: <IconShield />,
+      },
+
       {
         pill: "Printing",
         title: "Digital Wall Printing",
@@ -695,7 +725,6 @@ const ServicesDarkPremium = ({
     ],
     []
   );
-
   // ✅ Poster expertise list (professional naming)
   const expertise = useMemo(
     () => [
@@ -837,9 +866,9 @@ const ServicesDarkPremium = ({
             </div>
 
             <div className="svd-btnRow">
-              <button className="svd-btn svd-btnLight" type="button">
+              <Link to="/contact" className="svd-btn svd-btnLight">
                 {ctaPrimary}
-              </button>
+              </Link>
               <a className="svd-btn svd-btnGhost" href={`tel:${phones?.[0] || ""}`}>
                 {ctaSecondary}
               </a>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../img/2.png";
 
 // ✅ Add one more image (replace path with your actual file)
@@ -385,6 +386,9 @@ const BaseStyles = () => (
       text-transform: uppercase;
       font-size: 11px;
       cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
       transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, border-color 160ms ease;
       white-space: nowrap;
     }
@@ -567,12 +571,12 @@ const AboutRyaan = ({
             </div>
 
             <div className="ab-btnRow">
-              <button className="ab-btn ab-btnLight" type="button">
+              <Link to="/contact" className="ab-btn ab-btnLight">
                 {ctaPrimary}
-              </button>
-              <button className="ab-btn ab-btnGhost" type="button">
+              </Link>
+              <Link to="/contact" className="ab-btn ab-btnGhost">
                 {ctaSecondary}
-              </button>
+              </Link>
             </div>
           </div>
         </div>

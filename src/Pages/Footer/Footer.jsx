@@ -1,17 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-    FiMail, FiPhone, FiMapPin, FiInstagram,
-    FiFacebook, FiTwitter, FiLinkedin, FiArrowRight
-} from "react-icons/fi";
+import { FiMail, FiPhone, FiMapPin, FiInstagram } from "react-icons/fi";
 import logo from "../img/2.png";
 
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
-    return (
-        <>
-            <style>{`
+  return (
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap');
 
         .ft-root {
           background: #09090b;
@@ -145,7 +143,7 @@ const Footer = () => {
         }
         .ft-contact-text {
           font-size: 14px;
-          color: rgba(255, 255, 255, 0.7);
+          color: rgba(255, 255, 255, 0.72);
           line-height: 1.6;
         }
         .ft-contact-text span {
@@ -155,6 +153,21 @@ const Footer = () => {
           letter-spacing: 0.1em;
           color: rgba(255, 255, 255, 0.4);
           margin-bottom: 4px;
+        }
+
+        .ft-contact-link{
+          color: rgba(255, 255, 255, 0.72);
+          text-decoration: none;
+          display: inline-block;
+          font-variant-numeric: tabular-nums;
+        }
+        .ft-contact-link:hover{
+          color: #c0392b;
+        }
+        .ft-contact-lines{
+          display:flex;
+          flex-direction:column;
+          gap: 6px;
         }
 
         /* Bottom Bar */
@@ -170,15 +183,12 @@ const Footer = () => {
         }
         @media (min-width: 768px) { .ft-bottom { flex-direction: row; } }
 
-        .ft-copy {
-          font-size: 13px;
-          color: rgba(255, 255, 255, 0.4);
-        }
+        .ft-copy,
         .ft-made {
           font-size: 13px;
           color: rgba(255, 255, 255, 0.4);
+          margin: 0;
         }
-        .ft-made span { color: #c0392b; }
 
         .ft-logo-mini {
           height: 38px;
@@ -186,102 +196,116 @@ const Footer = () => {
           margin-bottom: 15px;
           opacity: 0.9;
         }
-
       `}</style>
 
-            <footer className="ft-root">
-                <div className="ft-shell">
-                    <div className="ft-grid">
-                        {/* Column 1: Brand */}
-                        <div className="ft-col">
-                            <img src={logo} alt="Ryaan Signage" className="ft-logo-mini" />
-                            <h2 className="ft-brand-name">RYAAN SIGNAGE</h2>
-                            <p className="ft-desc">
-                                Elevating brands through premium outdoor advertising, expert fabrication,
-                                and high-impact event solutions. Precision in every print, excellence in every sign.
-                            </p>
-                            <div className="ft-socials">
-                                <a href="#" className="ft-social-link"><FiInstagram /></a>
-                                <a href="#" className="ft-social-link"><FiFacebook /></a>
-                                <a href="#" className="ft-social-link"><FiTwitter /></a>
-                                <a href="#" className="ft-social-link"><FiLinkedin /></a>
-                            </div>
-                        </div>
+      <footer className="ft-root">
+        <div className="ft-shell">
+          <div className="ft-grid">
+            {/* Column 1: Brand */}
+            <div className="ft-col">
+              <img src={logo} alt="Ryaan Signage" className="ft-logo-mini" />
+              <h2 className="ft-brand-name">RYAAN SIGNAGE</h2>
+              <p className="ft-desc">
+                Elevating brands through premium outdoor advertising, expert fabrication,
+                and high-impact event solutions. Precision in every print, excellence in every sign.
+              </p>
 
-                        {/* Column 2: Quick Links */}
-                        <div className="ft-col">
-                            <h3 className="ft-h3">Quick Links</h3>
-                            <ul className="ft-list">
-                                <li><Link to="/" className="ft-link">Home</Link></li>
-                                <li><Link to="/about" className="ft-link">About Company</Link></li>
-                                <li><Link to="/gallery" className="ft-link">View Projects</Link></li>
-                                <li><Link to="/services" className="ft-link">Our Services</Link></li>
-                                <li><Link to="/contact" className="ft-link">Get A Quote</Link></li>
-                            </ul>
-                        </div>
+              {/* ✅ Only Instagram */}
+              <div className="ft-socials">
+                <a
+                  href="https://www.instagram.com/ryaansignage?igsh=dTZjcHl2bnltbjY0"
+                  className="ft-social-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  title="Instagram"
+                >
+                  <FiInstagram />
+                </a>
+              </div>
+            </div>
 
-                        {/* Column 3: Expertise */}
-                        <div className="ft-col">
-                            <h3 className="ft-h3">Our Expertise</h3>
-                            <ul className="ft-list">
-                                <li><Link to="/services" className="ft-link">Octonorm Stall</Link></li>
-                                <li><Link to="/services" className="ft-link">Designer Stall</Link></li>
-                                <li><Link to="/services" className="ft-link">Fabrication</Link></li>
-                                <li><Link to="/services" className="ft-link">Outdoor Branding</Link></li>
-                                <li><Link to="/services" className="ft-link">Event Planning</Link></li>
-                            </ul>
-                        </div>
+            {/* Column 2: Quick Links */}
+            <div className="ft-col">
+              <h3 className="ft-h3">Quick Links</h3>
+              <ul className="ft-list">
+                <li><Link to="/" className="ft-link">Home</Link></li>
+                <li><Link to="/about" className="ft-link">About Company</Link></li>
+                <li><Link to="/gallery" className="ft-link">View Projects</Link></li>
+                <li><Link to="/services" className="ft-link">Our Services</Link></li>
+                <li><Link to="/contact" className="ft-link">Get A Quote</Link></li>
+              </ul>
+            </div>
 
-                        {/* Column 4: Contact */}
-                        <div className="ft-col">
-                            <h3 className="ft-h3">Get In Touch</h3>
+            {/* Column 3: Expertise */}
+            <div className="ft-col">
+              <h3 className="ft-h3">Our Expertise</h3>
+              <ul className="ft-list">
+                <li><Link to="/services" className="ft-link">Octonorm Stall</Link></li>
+                <li><Link to="/services" className="ft-link">Designer Stall</Link></li>
+                <li><Link to="/services" className="ft-link">Fabrication</Link></li>
+                <li><Link to="/services" className="ft-link">Outdoor Branding</Link></li>
+                <li><Link to="/services" className="ft-link">Event Planning</Link></li>
+              </ul>
+            </div>
 
-                            <div className="ft-contact-item">
-                                <div className="ft-icon-box"><FiMapPin /></div>
-                                <div className="ft-contact-text">
-                                    <span>Address</span>
-                                    Shankar Nagar, Raipur, Chhattisgarh
-                                </div>
-                            </div>
+            {/* Column 4: Contact */}
+            <div className="ft-col">
+              <h3 className="ft-h3">Get In Touch</h3>
 
-                            <div className="ft-contact-item">
-                                <div className="ft-icon-box"><FiPhone /></div>
-                                <div className="ft-contact-text">
-                                    <span>Phone</span>
-                                    +91 9876543210
-                                </div>
-                            </div>
-
-                            <div className="ft-contact-item">
-                                <div className="ft-icon-box"><FiMail /></div>
-                                <div className="ft-contact-text">
-                                    <span>Email</span>
-                                    ryaansignage@gmail.com
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="ft-bottom">
-                        <p className="ft-copy">
-                            © {currentYear} Ryaan Signage. All rights reserved.
-                        </p>
-                        <p className="ft-made">
-                            Designed &amp; Developed by{" "}
-                            <a
-                                href="https://wa.me/917470958844?text=Hi%20Mind%20Bridge%20Tech,%20I%20want%20to%20discuss%20a%20website%20project."
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}
-                            >
-                                Mind Bridge Tech
-                            </a>
-                        </p>
-                    </div>
+              <div className="ft-contact-item">
+                <div className="ft-icon-box"><FiMapPin /></div>
+                <div className="ft-contact-text">
+                  <span>Address</span>
+                  New Shanti Nagar, Govind Nagar, Raipur, Chhattisgarh 492004
                 </div>
-            </footer>
-        </>
-    );
+              </div>
+
+              <div className="ft-contact-item">
+                <div className="ft-icon-box"><FiPhone /></div>
+                <div className="ft-contact-text">
+                  <span>Phone</span>
+                  <div className="ft-contact-lines">
+                    <a className="ft-contact-link" href="tel:+919617178170">
+                      +91 96171 78170
+                    </a>
+                    <a className="ft-contact-link" href="tel:+917000315002">
+                      +91 70003 15002
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="ft-contact-item">
+                <div className="ft-icon-box"><FiMail /></div>
+                <div className="ft-contact-text">
+                  <span>Email</span>
+                  <a className="ft-contact-link" href="mailto:ryaangroup1@gmail.com">
+                   Ryaansignage@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="ft-bottom">
+            <p className="ft-copy">© {currentYear} Ryaan Signage. All rights reserved.</p>
+            <p className="ft-made">
+              Designed &amp; Developed by{" "}
+              <a
+                href="https://wa.me/917470958844?text=Hi%20Mind%20Bridge%20Tech,%20I%20want%20to%20discuss%20a%20website%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "#fff", textDecoration: "none", fontWeight: 600 }}
+              >
+                Mind Bridge Tech
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
 };
 
 export default Footer;

@@ -12,6 +12,7 @@ import About from './Pages/About/About'
 import Services from './Pages/Services/Services'
 import Footer from './Pages/Footer/Footer'
 import ScrollToTop from './Components/ScrollToTop'
+import Whatsapp from './Pages/Whatsapp/Whatsapp'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <>
+                <Whatsapp />
                 <Hero theme="dark" />
                 <Mission />
                 <Vision />

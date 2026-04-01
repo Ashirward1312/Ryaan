@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 /* Red/White Theme Page
    - MissionPage (default export only)
@@ -154,6 +155,9 @@ const BaseStyles = () => (
       text-transform: uppercase;
       font-size: 11px;
       cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
       transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
     }
     .rw-btnPrimary{
@@ -439,12 +443,12 @@ const MissionPage = ({
               </p>
 
               <div className="rw-ctaRow">
-                <button className="rw-btn rw-btnPrimary" type="button">
+                <Link to="/contact" className="rw-btn rw-btnPrimary">
                   {ctaPrimary}
-                </button>
-                <button className="rw-btn rw-btnGhost" type="button">
+                </Link>
+                <Link to="/contact" className="rw-btn rw-btnGhost">
                   {ctaSecondary}
-                </button>
+                </Link>
               </div>
 
               <p className="rw-mini" style={{ marginTop: 12 }}>
@@ -565,9 +569,9 @@ const MissionPage = ({
                   Tell us your requirement (stall, stage, branding, printing, indoor/outdoor). We’ll suggest the best execution plan.
                 </p>
               </div>
-              <button className="rw-btn rw-btnPrimary" type="button">
-                Book a Meeting
-              </button>
+                <Link to="/contact" className="rw-btn rw-btnPrimary">
+                  Book a Meeting
+                </Link>
             </div>
           </div>
         </section>

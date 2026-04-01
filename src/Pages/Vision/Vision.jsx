@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 /* Vision Page (Dark Theme + Red Accent) — NO ROADMAP — Default Export */
 
@@ -168,6 +169,9 @@ const BaseStyles = () => (
       text-transform: uppercase;
       font-size: 11px;
       cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      text-align: center;
       transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease, border-color 160ms ease;
       white-space: nowrap;
     }
@@ -470,12 +474,12 @@ const VisionDarkPage = ({
               </p>
 
               <div className="vd-ctaRow">
-                <button className="vd-btn vd-btnPrimary" type="button">
+                <Link to="/gallery" className="vd-btn vd-btnPrimary">
                   {ctaPrimary}
-                </button>
-                <button className="vd-btn vd-btnGhost" type="button">
+                </Link>
+                <Link to="/contact" className="vd-btn vd-btnGhost">
                   {ctaSecondary}
-                </button>
+                </Link>
               </div>
 
               <p className="vd-brandLine">
@@ -583,9 +587,9 @@ const VisionDarkPage = ({
                   Share your requirement (stall, stage, indoor/outdoor branding, printing). We’ll recommend the best setup for maximum visibility.
                 </p>
               </div>
-              <button className="vd-btn vd-btnPrimary" type="button">
-                Request a Quote
-              </button>
+                <Link to="/contact" className="vd-btn vd-btnPrimary">
+                  Request a Quote
+                </Link>
             </div>
           </div>
         </section>
