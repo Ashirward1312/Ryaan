@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import img1 from "../img/img1.jpeg";
 import img2 from "../img/img2.jpeg";
 import img3 from "../img/img3.jpeg";
 import img4 from "../img/img4.jpeg";
+
+
 
 import video1 from "../img/video1.mp4";
 import video2 from "../img/video2.mp4";
@@ -11,18 +12,129 @@ import video4 from "../img/video4.mp4";
 import video5 from "../img/video5.mp4";
 import video6 from "../img/video6.mp4";
 
+import vImg from "../New folder/v.png";
+
+// --- NEW ASSETS FROM 'New folder' ---
+import nwImg1 from "../New folder/WhatsApp Image 2026-04-03 at 10.08.22 PM.jpeg";
+import nwImg2 from "../New folder/WhatsApp Image 2026-04-03 at 10.13.32 PM.jpeg";
+import nwImg3 from "../New folder/WhatsApp Image 2026-04-03 at 10.14.12 PM.jpeg";
+import nwImg4 from "../New folder/WhatsApp Image 2026-04-03 at 10.16.32 PM.jpeg";
+import nwImg5 from "../New folder/WhatsApp Image 2026-04-03 at 10.17.56 PM.jpeg";
+import nwImg6 from "../New folder/WhatsApp Image 2026-04-03 at 10.19.45 PM.jpeg";
+import nwImg7 from "../New folder/WhatsApp Image 2026-04-03 at 10.19.46 PM (1).jpeg";
+import nwImg8 from "../New folder/WhatsApp Image 2026-04-03 at 10.19.46 PM.jpeg";
+import nwImg9 from "../New folder/WhatsApp Image 2026-04-03 at 10.19.47 PM (1).jpeg";
+import nwImg10 from "../New folder/WhatsApp Image 2026-04-03 at 10.19.47 PM (2).jpeg";
+import nwImg11 from "../New folder/WhatsApp Image 2026-04-03 at 10.19.47 PM (3).jpeg";
+import nwImg12 from "../New folder/WhatsApp Image 2026-04-03 at 10.19.47 PM (4).jpeg";
+import nwImg13 from "../New folder/WhatsApp Image 2026-04-03 at 10.19.47 PM (5).jpeg";
+import nwImg14 from "../New folder/WhatsApp Image 2026-04-03 at 10.19.47 PM (6).jpeg";
+import nwImg15 from "../New folder/WhatsApp Image 2026-04-03 at 10.19.47 PM.jpeg";
+import nwImg16 from "../New folder/WhatsApp Image 2026-04-03 at 10.21.45 PM.jpeg";
+import nwImg17 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.06 PM (1).jpeg";
+import nwImg18 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.06 PM.jpeg";
+import nwImg19 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.07 PM (1).jpeg";
+import nwImg20 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.07 PM (2).jpeg";
+import nwImg21 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.07 PM.jpeg";
+import nwImg22 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.08 PM (1).jpeg";
+import nwImg23 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.08 PM (2).jpeg";
+import nwImg24 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.08 PM.jpeg";
+import nwImg25 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.09 PM (1).jpeg";
+import nwImg26 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.09 PM (2).jpeg";
+import nwImg27 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.09 PM.jpeg";
+import nwImg28 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.10 PM (1).jpeg";
+import nwImg29 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.10 PM (2).jpeg";
+import nwImg30 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.10 PM.jpeg";
+import nwImg31 from "../New folder/WhatsApp Image 2026-04-03 at 10.23.11 PM.jpeg";
+import nwImg32 from "../New folder/WhatsApp Image 2026-04-03 at 10.24.02 PM.jpeg";
+import nwImg33 from "../New folder/WhatsApp Image 2026-04-03 at 10.24.03 PM (1).jpeg";
+import nwImg34 from "../New folder/WhatsApp Image 2026-04-03 at 10.24.03 PM.jpeg";
+import nwImg35 from "../New folder/WhatsApp Image 2026-04-03 at 10.26.12 PM (1).jpeg";
+import nwImg36 from "../New folder/WhatsApp Image 2026-04-03 at 10.26.12 PM (2).jpeg";
+import nwImg37 from "../New folder/WhatsApp Image 2026-04-03 at 10.26.12 PM.jpeg";
+import nwImg38 from "../New folder/WhatsApp Image 2026-04-03 at 10.26.13 PM (1).jpeg";
+import nwImg39 from "../New folder/WhatsApp Image 2026-04-03 at 10.26.13 PM.jpeg";
+
+import nwVid1 from "../New folder/WhatsApp Video 2026-04-03 at 10.09.42 PM.mp4";
+import nwVid2 from "../New folder/WhatsApp Video 2026-04-03 at 10.10.01 PM.mp4";
+import nwVid3 from "../New folder/WhatsApp Video 2026-04-03 at 10.11.33 PM.mp4";
+import nwVid4 from "../New folder/WhatsApp Video 2026-04-03 at 10.11.38 PM.mp4";
+import nwVid5 from "../New folder/WhatsApp Video 2026-04-03 at 10.12.58 PM.mp4";
+import nwVid6 from "../New folder/WhatsApp Video 2026-04-03 at 10.14.04 PM.mp4";
+import nwVid7 from "../New folder/WhatsApp Video 2026-04-03 at 10.14.51 PM.mp4";
+import nwVid8 from "../New folder/WhatsApp Video 2026-04-03 at 10.16.01 PM.mp4";
+import nwVid9 from "../New folder/WhatsApp Video 2026-04-03 at 10.16.20 PM.mp4";
+import nwVid10 from "../New folder/WhatsApp Video 2026-04-03 at 10.17.15 PM.mp4";
+import nwVid11 from "../New folder/WhatsApp Video 2026-04-03 at 10.17.50 PM.mp4";
+import nwVid12 from "../New folder/WhatsApp Video 2026-04-03 at 10.19.55 PM (1).mp4";
+import nwVid13 from "../New folder/WhatsApp Video 2026-04-03 at 10.19.55 PM.mp4";
+import nwVid14 from "../New folder/WhatsApp Video 2026-04-03 at 10.20.40 PM.mp4";
+
 const projects = [
-  { id: 1, type: "video", src: video1, poster: img1},
-  { id: 2, type: "image", src: img1},
-  { id: 3, type: "video", src: video2, poster: img2},
-  { id: 4, type: "image", src: img2},
-  { id: 5, type: "video", src: video3, poster: img3},
-  { id: 6, type: "image", src: img3},
-  { id: 7, type: "video", src: video4, poster: img4},
-  { id: 8, type: "image", src: img4},
-  { id: 9, type: "video", src: video5, poster: img1},
-  { id: 10, type: "video", src: video6, poster: img2},
+  // --- IMAGES FIRST ---
+  { id: 31, type: "image", src: nwImg1 },
+  { id: 32, type: "image", src: nwImg2 },
+  { id: 33, type: "image", src: nwImg3 },
+  { id: 34, type: "image", src: nwImg4 },
+  { id: 35, type: "image", src: nwImg5 },
+  { id: 36, type: "image", src: nwImg6 },
+  { id: 37, type: "image", src: nwImg7 },
+  { id: 38, type: "image", src: nwImg8 },
+  { id: 39, type: "image", src: nwImg9 },
+  { id: 40, type: "image", src: nwImg10 },
+  { id: 41, type: "image", src: nwImg11 },
+  { id: 42, type: "image", src: nwImg12 },
+  { id: 43, type: "image", src: nwImg13 },
+  { id: 44, type: "image", src: nwImg14 },
+  { id: 45, type: "image", src: nwImg15 },
+  { id: 46, type: "image", src: nwImg16 },
+  { id: 47, type: "image", src: nwImg17 },
+  { id: 48, type: "image", src: nwImg18 },
+  { id: 49, type: "image", src: nwImg19 },
+  { id: 50, type: "image", src: nwImg20 },
+  { id: 51, type: "image", src: nwImg21 },
+  { id: 52, type: "image", src: nwImg22 },
+  { id: 53, type: "image", src: nwImg23 },
+  { id: 54, type: "image", src: nwImg24 },
+  { id: 55, type: "image", src: nwImg25 },
+  { id: 56, type: "image", src: nwImg26 },
+  { id: 57, type: "image", src: nwImg27 },
+  { id: 58, type: "image", src: nwImg28 },
+  { id: 59, type: "image", src: nwImg29 },
+  { id: 60, type: "image", src: nwImg30 },
+  { id: 61, type: "image", src: nwImg31 },
+  { id: 62, type: "image", src: nwImg32 },
+  { id: 63, type: "image", src: nwImg33 },
+  { id: 64, type: "image", src: nwImg34 },
+  { id: 65, type: "image", src: nwImg35 },
+  { id: 66, type: "image", src: nwImg36 },
+  { id: 67, type: "image", src: nwImg37 },
+  { id: 68, type: "image", src: nwImg38 },
+  { id: 69, type: "image", src: nwImg39 },
+
+  // --- VIDEOS AFTER ---
+  { id: 1, type: "video", src: video1, poster: vImg },
+  { id: 3, type: "video", src: video2, poster: vImg },
+  { id: 4, type: "video", src: video3, poster: vImg },
+  { id: 5, type: "video", src: video4, poster: vImg },
+  { id: 6, type: "video", src: video5, poster: vImg },
+  { id: 7, type: "video", src: video6, poster: vImg },
+  { id: 11, type: "video", src: nwVid1, poster: vImg },
+  { id: 12, type: "video", src: nwVid2, poster: vImg },
+  { id: 13, type: "video", src: nwVid3, poster: vImg },
+  { id: 14, type: "video", src: nwVid4, poster: vImg },
+  { id: 15, type: "video", src: nwVid5, poster: vImg },
+  { id: 16, type: "video", src: nwVid6, poster: vImg },
+  { id: 17, type: "video", src: nwVid7, poster: vImg },
+  { id: 18, type: "video", src: nwVid8, poster: vImg },
+  { id: 19, type: "video", src: nwVid9, poster: vImg },
+  { id: 20, type: "video", src: nwVid10, poster: vImg },
+  { id: 21, type: "video", src: nwVid11, poster: vImg },
+  { id: 22, type: "video", src: nwVid12, poster: vImg },
+  { id: 23, type: "video", src: nwVid13, poster: vImg },
+  { id: 24, type: "video", src: nwVid14, poster: vImg },
 ];
+
 
 const BaseStyles = () => (
   <style>{`
@@ -138,6 +250,10 @@ const BaseStyles = () => (
       font-weight: 600;
     }
 
+    .gallery-tag{
+      display: none;
+    }
+
     .gallery-actions{
       display: flex;
       gap: 12px;
@@ -180,8 +296,8 @@ const BaseStyles = () => (
 
     .gallery-grid{
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
 
     .gallery-card{
@@ -253,18 +369,36 @@ const BaseStyles = () => (
     }
 
     .gallery-play{
-      width: 46px;
-      height: 46px;
+      width: 68px;
+      height: 68px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.25);
       color: white;
-      font-size: 18px;
-      backdrop-filter: blur(10px);
-      flex-shrink: 0;
+      font-size: 24px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .gallery-card:hover .gallery-play{
+      transform: scale(1.15) rotate(5deg);
+      background: var(--accent);
+      border-color: var(--accent2);
+      box-shadow: 0 10px 40px rgba(217, 74, 56, 0.6);
+    }
+
+    .gallery-center-play{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      pointer-events: none;
     }
 
     .gallery-bottom h3{
@@ -376,7 +510,13 @@ const BaseStyles = () => (
       font-size: 14px;
     }
 
-    @media (max-width: 992px){
+    @media (max-width: 1100px){
+      .gallery-grid{
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 900px){
       .gallery-grid{
         grid-template-columns: repeat(2, 1fr);
       }
@@ -424,18 +564,21 @@ const MediaCard = ({ project, onOpen }) => {
             Please check file path / format
           </div>
         ) : project.type === "video" ? (
-          <video
-            className="gallery-media"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            poster={project.poster}
-            onError={() => setHasError(true)}
-          >
-            <source src={project.src} type="video/mp4" />
-          </video>
+          <>
+            <video
+              className="gallery-media"
+              muted
+              playsInline
+              preload="metadata"
+              poster={project.poster}
+              onError={() => setHasError(true)}
+            >
+              <source src={project.src} type="video/mp4" />
+            </video>
+            <div className="gallery-center-play">
+              <div className="gallery-play">▶</div>
+            </div>
+          </>
         ) : (
           <img
             src={project.src}
@@ -449,20 +592,7 @@ const MediaCard = ({ project, onOpen }) => {
 
       <div className="gallery-overlay">
         <div className="gallery-top">
-          <div className="gallery-tag">
-            {project.type === "video" ? "Video Project" : "Image Project"}
-          </div>
-          <div className="gallery-play">
-            {project.type === "video" ? "▶" : "↗"}
-          </div>
-        </div>
-
-        <div className="gallery-bottom">
-          <h3>{project.title}</h3>
-          <div className="gallery-meta">
-            <span className="gallery-pill">{project.category}</span>
-            <span>{project.type === "video" ? "Live Preview" : "High Resolution"}</span>
-          </div>
+          {/* Tags removed for a cleaner look */}
         </div>
       </div>
     </div>
@@ -514,7 +644,6 @@ const GalleryModal = ({ item, onClose }) => {
         </div>
 
         <div className="gallery-modal-info">
-          <h3>{item.title}</h3>
           <p>
             Premium creative showcase from our portfolio. This preview highlights our
             branding, signage, printing, exhibition, media, and visual production work.
@@ -563,9 +692,8 @@ const Gallery = () => {
           </h2>
 
           <p className="gallery-subtitle">
-            Explore our premium branding, signage, digital display, print and motion
-            work in a clean modern showcase. Every card is now equal size for a more
-            polished and balanced look.
+            Explore our premium collection of branding, signage, and digital motion
+            work in a clean, minimalist gallery.
           </p>
         </div>
 
